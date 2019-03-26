@@ -35,4 +35,8 @@ public class ArticleController {
             }
         });
     }
+
+    public List<RestArticleReponse> getArticles() {
+        return articles;
+    }
 }

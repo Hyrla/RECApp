@@ -16,6 +16,8 @@ import java.util.List;
 public class ArticleAdapter extends RecyclerView.Adapter<ArticleAdapter.ViewHolder>{
     private List<RestArticleReponse> values;
 
+    private final View.OnClickListener listener;
+
     public class ViewHolder extends RecyclerView.ViewHolder{
         public TextView txtView;
         public ImageView imgView;
@@ -28,9 +30,12 @@ public class ArticleAdapter extends RecyclerView.Adapter<ArticleAdapter.ViewHold
         }
     }
 
-    public ArticleAdapter(List<RestArticleReponse> resp) {
+    public ArticleAdapter(List<RestArticleReponse> resp, View.OnClickListener listener) {
+        this.listener = listener;
         values = resp;
+
     }
+
 
     @Override
     public ArticleAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -39,8 +44,13 @@ public class ArticleAdapter extends RecyclerView.Adapter<ArticleAdapter.ViewHold
         View v = inflater.inflate(R.layout.row_layout, parent, false);
         // set the view's size, margins, paddings and layout parameters
         //v.setOnClickListener(this.listener);
+
+        v.setOnClickListener(this.listener);
         ViewHolder vh = new ViewHolder(v);
+
+
         return vh;
+
     }
 
     // Replace the contents of a view (invoked by the layout manager)
@@ -54,7 +64,7 @@ public class ArticleAdapter extends RecyclerView.Adapter<ArticleAdapter.ViewHold
 
         Picasso
                 .get()
-                .load("http://radioesieaclub.com/media/" + currentArticle.getImage())
+                .load("http://radioesieaclub.com/media/" + currentArticle.getPhoto())
                 .resize(0,50)
                 .into(holder.imgView);
 

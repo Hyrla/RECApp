@@ -6,7 +6,7 @@ public class RestArticleReponse {
     private String contenu;
     private String auteur;
     private String date;
-    private String image;
+    private String photo;
 
     public String getTitre() {
         return titre;
@@ -28,7 +28,7 @@ public class RestArticleReponse {
         return date;
     }
 
-    public String getImage() {
-        return image;
+    public String getPhoto() {
+        return photo;
     }
 }
