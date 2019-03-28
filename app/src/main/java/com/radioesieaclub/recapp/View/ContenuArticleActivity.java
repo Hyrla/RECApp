@@ -3,6 +3,8 @@ package com.radioesieaclub.recapp.View;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.transition.Slide;
+import android.view.Gravity;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -45,7 +47,8 @@ public class ContenuArticleActivity extends AppCompatActivity {
         auteur.setText(articleReponse.getAuteur());
         date.setText(articleReponse.getDate());
 
-
+        getWindow().setExitTransition(new Slide(Gravity.LEFT));
+        getWindow().setEnterTransition(new Slide(Gravity.RIGHT));
 
     }
 }

@@ -1,11 +1,14 @@
 package com.radioesieaclub.recapp.View;
 
+import android.app.ActivityOptions;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.transition.Slide;
+import android.view.Gravity;
 import android.view.View;
 
 import com.google.gson.Gson;
@@ -32,6 +35,9 @@ public class MainActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.articleRecyclerView);
         controller = new ArticleController(this);
         controller.onCreate();
+        getWindow().setExitTransition(new Slide(Gravity.LEFT));
+        getWindow().setEnterTransition(new Slide(Gravity.RIGHT));
+
     }
 
     public void ShowList(List<RestArticleReponse> listArticle){
@@ -49,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
             int itemPostition = recyclerView.getChildLayoutPosition(v);
             Gson gson = new Gson();
             intent.putExtra("Article", gson.toJson(controller.getArticles().get(itemPostition)));
-            startActivity(intent);
+            startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(MainActivity.this).toBundle());
         }
 
     }
