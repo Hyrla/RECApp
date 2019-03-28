@@ -10,11 +10,16 @@
 
 
     <TextView
+        android:id="@+id/textArticle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textArticle"
-        app:layout_constraintTop_toBottomOf="@id/ImageArticle"
-        android:text="Mon contenue"/>
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        android:text="Mon contenu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ImageArticle" />
 
 
     <ImageView
@@ -25,21 +30,25 @@
 
 
     <TextView
+        android:id="@+id/Auteur"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/textArticle"
+        android:layout_marginEnd="32dp"
+        android:text="Auteur"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        android:id="@+id/Auteur"
-        android:text="Auteur"/>
+        app:layout_constraintTop_toBottomOf="@id/textArticle" />
 
     <TextView
+        android:id="@+id/date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/textArticle"
+        android:layout_marginStart="32dp"
+        android:text="Date"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        android:id="@+id/date"
-        android:text="date"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textArticle" />
 
 </android.support.constraint.ConstraintLayout>
