@@ -31,7 +31,7 @@ http://radioesieaclub.com/api/get_bonsplans/
 https://github.com/Hyrla/RECStreaming
 ````
 
-## Consignes respectées : 
+## Consignes respectées
 
 - Architecture MVC
 - Appels REST
