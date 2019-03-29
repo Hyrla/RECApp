@@ -26,8 +26,8 @@ http://radioesieaclub.com/api/get_videos/
 http://radioesieaclub.com/api/get_bonsplans/
 ````
 
+- Plus d'infos
 ````
-Plus d'infos :
 https://github.com/Hyrla/RECStreaming
 ````
 
