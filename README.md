@@ -8,13 +8,26 @@ Gauthier HEISS, 33
 
 Ceci est mon projet réalisé lors du module développement mobile lors de ma 3e année à l'ESIEA. Elle permet de récupérer les articles publiés par l'association Radio ESIEA Club au travers d'une API que j'ai également développée. L'API permettant de récupérer la liste des vidéos et des bons plans est déjà développée mais pas encore implémentée de l'application. Plus d'infos : http://radioesieaclub.com
 
-## Prérequis
+## Utilisation de l'API
 
 
-- Installation d'Android Studio<br/>
+- Liste des articles
+````
+http://radioesieaclub.com/api/get_articles/
+````
 
+- Liste des vidéos
+````
+http://radioesieaclub.com/api/get_videos/
+````
+
+- Liste des bons plans
+````
+http://radioesieaclub.com/api/get_bonsplans/
+````
 
 ````
+Plus d'infos :
 https://github.com/Hyrla/RECStreaming
 ````
 
