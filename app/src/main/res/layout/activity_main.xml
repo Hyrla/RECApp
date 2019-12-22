@@ -7,20 +7,32 @@
     tools:context=".View.MainActivity">
 
     <android.support.v7.widget.RecyclerView
+        android:id="@+id/articleRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/articleRecyclerView"
-        android:scrollbars="vertical">
-    </android.support.v7.widget.RecyclerView>
+        android:scrollbars="vertical"></android.support.v7.widget.RecyclerView>
 
     <TextView
+        android:id="@+id/txtView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/txtView"/>
+        android:layout_height="match_parent" />
 
     <ImageView
+        android:id="@+id/imgView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/imgView"/>
+        android:layout_height="match_parent" />
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/activity_main_bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:background="@color/colorAccent"
+        app:itemIconTint="@drawable/bottom_navigation_colors"
+        app:itemTextColor="@drawable/bottom_navigation_colors"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/bottom_navigation_menu"
+        tools:layout_editor_absoluteX="0dp" />
 
 </android.support.constraint.ConstraintLayout>

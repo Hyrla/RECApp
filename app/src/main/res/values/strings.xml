@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">RECApp</string>
+    <string name="menu_articles">Articles</string>
+    <string name="menu_about">A Propos</string>
 </resources>
