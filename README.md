@@ -43,6 +43,13 @@ https://github.com/Hyrla/RECStreaming
 - Animation entre les activités
 - Bottom navigation menu
 
+## Ce que j'ai appris
+
+- Utiliser correction un git avec des branches
+- Utiliser les outils de développement Android
+- Mettre en place un environnement d'émulation Android
+- Créer une API et l'utiliser sur un application mobile
+
 ## Captures d'écran
 
 ![Home](https://i.ibb.co/xLGmTtC/Screenshot-95.png)
