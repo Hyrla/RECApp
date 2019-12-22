@@ -2,4 +2,7 @@
     <string name="app_name">RECApp</string>
     <string name="menu_articles">Articles</string>
     <string name="menu_about">A Propos</string>
+    <string name="about_author">Créée par Gauthier HEISS</string>
+    <string name="about_author_role">Trésorier de REC 2019-2020</string>
+    <string name="about_more">Plus d\'infos : radioesieaclub.com</string>
 </resources>
