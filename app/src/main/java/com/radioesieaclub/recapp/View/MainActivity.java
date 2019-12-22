@@ -3,6 +3,8 @@ package com.radioesieaclub.recapp.View;
 import android.app.ActivityOptions;
 import android.content.Context;
 import android.content.Intent;
+import android.support.design.internal.BottomNavigationMenu;
+import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -19,7 +21,12 @@ import com.radioesieaclub.recapp.R;
 
 import java.util.List;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class MainActivity extends AppCompatActivity {
+
+    @BindView(R.id.activity_main_bottom_navigation) BottomNavigationView bottomNavigationView;
 
     private RecyclerView recyclerView;
     private RecyclerView.Adapter mAdapter;
@@ -32,12 +39,17 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         context = getApplicationContext();
         setContentView(R.layout.activity_main);
+        ButterKnife.bind(this);
         recyclerView = findViewById(R.id.articleRecyclerView);
         controller = new ArticleController(this);
         controller.onCreate();
         getWindow().setExitTransition(new Slide(Gravity.LEFT));
         getWindow().setEnterTransition(new Slide(Gravity.RIGHT));
+        this.configureBottomView();
+    }
 
+    private void configureBottomView(){
+        bottomNavigationView.setOnNavigationItemSelectedListener(item -> updateMainFragment(item.getItemId()));
     }
 
     public void ShowList(List<RestArticleReponse> listArticle){
@@ -58,6 +70,16 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(MainActivity.this).toBundle());
         }
 
+    }
+
+    private Boolean updateMainFragment(Integer integer){
+        switch (integer) {
+            case R.id.action_about:
+                Intent intent = new Intent(this, AboutActivity.class);
+                startActivity(intent);
+                break;
+        }
+        return true;
     }
 
 }
