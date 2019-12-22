@@ -13,7 +13,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".View.ContenuArticleActivity"></activity>
+        <activity android:name=".View.AboutActivity"></activity>
+        <activity android:name=".View.ContenuArticleActivity" />
         <activity android:name=".View.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
