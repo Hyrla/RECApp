@@ -45,7 +45,7 @@ https://github.com/Hyrla/RECStreaming
 
 ## Ce que j'ai appris
 
-- Utiliser correction un git avec des branches
+- Utiliser un git avec des branches
 - Utiliser les outils de développement Android
 - Mettre en place un environnement d'émulation Android
 - Créer une API et l'utiliser sur un application mobile
